@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  postgres:
+    image: 'postgres:latest'
+    restart: on-failure
+    environment:
+      POSTGRES_DB: 'hiperdino'
+      POSTGRES_USER: 'admin'
+      POSTGRES_PASSWORD: 'password'
+    ports:
+      - '5432:5432'
+
