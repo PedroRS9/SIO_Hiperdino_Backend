@@ -28,4 +28,12 @@ public class Inventory {
     @JoinColumn(name = "store_id")
     private Store store;
     private Integer quantity;
+
+    public void increaseQuantity() {
+        quantity++;
+    }
+
+    public void decreaseQuantity() {
+        quantity--;
+    }
 }

@@ -7,4 +7,6 @@ import java.util.List;
 public interface InventoryService {
     List<Inventory> getInventories();
     Inventory getInventoryById(int inventoryId);
+    void increaseQuantity(int inventoryId);
+    void decreaseQuantity(int inventoryId);
 }
