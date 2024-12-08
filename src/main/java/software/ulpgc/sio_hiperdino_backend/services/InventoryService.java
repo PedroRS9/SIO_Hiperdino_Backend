@@ -9,4 +9,5 @@ public interface InventoryService {
     Inventory getInventoryById(int inventoryId);
     void increaseQuantity(int inventoryId);
     void decreaseQuantity(int inventoryId);
+    void checkInventoryLevels();
 }

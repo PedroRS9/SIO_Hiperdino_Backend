@@ -20,7 +20,7 @@ INSERT INTO store (name, location) VALUES
 
 -- Insertar datos en la tabla Inventory
 INSERT INTO inventory (product_id, store_id, quantity) VALUES
-                                                           (1, 1, 50),
+                                                           (1, 1, 10),
                                                            (2, 1, 100),
                                                            (3, 2, 30),
                                                            (4, 3, 20),
