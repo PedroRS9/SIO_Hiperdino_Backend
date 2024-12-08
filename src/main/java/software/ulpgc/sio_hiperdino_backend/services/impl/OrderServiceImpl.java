@@ -54,11 +54,12 @@ public class OrderServiceImpl implements OrderService {
         Order order = orderRepository.findById(orderId).orElseThrow(() -> new EntityNotFoundException("Order"));
         order.setDelivered(true);
         orderRepository.save(order);
-            updateInventoryQuantity(order);
+        updateInventoryQuantity(order);
     }
 
     private void updateInventoryQuantity(Order order) {
-        Inventory inventory = inventoryRepository.findByProductAndStore(order.getProduct(), order.getStore()).orElseThrow(() -> new EntityNotFoundException("Inventory"));
+        Inventory inventory = inventoryRepository.findByProductAndStore(order.getProduct(), order.getStore()).orElse(null);
+        if(inventory == null) return;
         inventory.setQuantity(inventory.getQuantity() + order.getQuantity());
         inventoryRepository.save(inventory);
     }
