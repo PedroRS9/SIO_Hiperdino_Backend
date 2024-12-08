@@ -9,5 +9,5 @@ CREATE TABLE orders (
 );
 
 INSERT INTO warehouse (name, location) VALUES
-    ('HiperDino Plataforma Logística Telde', 'Parque Tecnológico Lomos de Silva Parc.1, 35214 Telde, Las Palmas'),
+    ('HiperDino Plataforma Logística Telde', 'Lugar Montaña Las Huesas, Polígono Industrial de Salinetas, Montaña las Huesas, Telde, Las Palmas, Canarias, 35215, España'),
     ('HiperDino Plataforma Logística Güímar', 'Polígono Industrial Valle de Güímar Manzana XII - Parcela I, 38550 Arafo, Santa Cruz de Tenerife');
