@@ -2,8 +2,8 @@ package software.ulpgc.sio_hiperdino_backend.dtos;
 
 public record OrderDto(
     Integer id,
-    String warehouseName,
-    String storeName,
+    WarehouseDto warehouse,
+    StoreDto store,
     String productName,
     Integer quantity,
     boolean delivered

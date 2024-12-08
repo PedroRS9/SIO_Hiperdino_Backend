@@ -8,11 +8,19 @@ import java.util.List;
 
 @Component
 public class OrderConverter {
+    private final StoreConverter storeConverter;
+    private final WarehouseConverter warehouseConverter;
+
+    public OrderConverter(StoreConverter storeConverter, WarehouseConverter warehouseConverter) {
+        this.storeConverter = storeConverter;
+        this.warehouseConverter = warehouseConverter;
+    }
+
     public OrderDto fromOrder(Order order){
         return new OrderDto(
                 order.getId(),
-                order.getWarehouse().getName(),
-                order.getStore().getName(),
+                warehouseConverter.fromWarehouse(order.getWarehouse()),
+                storeConverter.fromStore(order.getStore()),
                 order.getProduct().getName(),
                 order.getQuantity(),
                 order.isDelivered()
